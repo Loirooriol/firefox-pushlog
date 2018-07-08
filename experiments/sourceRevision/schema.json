@@ -1,0 +1,15 @@
+[
+  {
+    "namespace": "experiments.sourceRevision",
+    "description": "SourceRevision",
+    "functions": [
+      {
+        "name": "getURL",
+        "type": "function",
+        "description": "Returns the source revision URL",
+        "parameters": [],
+        "async": true
+      }
+    ]
+  }
+]

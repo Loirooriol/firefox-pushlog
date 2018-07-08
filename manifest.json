@@ -1,0 +1,34 @@
+{
+  "name": "Firefox pushlog",
+  "short_name": "Pushlog",
+  "author": "Oriol Brufau",
+  "homepage_url": "https://github.com/Loirooriol/firefox-pushlog",
+  "version": "1.0",
+  "description": "Shows Firefox changes introduced by last update, or that will be included in a future update.",
+  "manifest_version": 2,
+  "applications": {
+    "gecko": {
+      "id": "firefox-pushlog@Loirooriol"
+    }
+  },
+  "permissions": [
+    "menus",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "experiment_apis": {
+    "sourceRevision": {
+      "schema": "experiments/sourceRevision/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "script": "experiments/sourceRevision/api.js",
+        "paths": [["experiments", "sourceRevision"]]
+      }
+    }
+  }
+}
